@@ -36,6 +36,22 @@ Tab1Section:NewTextBox("Hipheight", "Sets Hip Height", function(hh)
 				game.Players.LocalPlayer.Character.Humanoid.HipHeight = hh
 end)
 
+Tab1Section:NewToggle("Autobring all", nil, function(State)
+cool = State
+game:GetService("RunService").Stepped:connect(
+    function()
+        if cool then
+            for i, v in pairs(game:GetService("Workspace")["Zombie Storage"]:GetDescendants()) do
+                if v:IsA("Part") and v.Name ~= "Head" then
+                    v.CanCollide = false
+                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -9)
+                end
+            end
+        end
+    end
+)
+end)
+
 
 
 Tab1Section:NewLabel("Other")
