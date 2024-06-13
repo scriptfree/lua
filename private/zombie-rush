@@ -23,12 +23,12 @@ end)
 
 Tab1Section:NewTextBox("Walk Speed", "Default is 16", function(ws)
 
-				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
 end)
 
 Tab1Section:NewTextBox("Jump Power", "Default is 50", function(jp)
 
-				game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = jp
+        game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = jp
 end)
 
 Tab1Section:NewTextBox("Jump Power", "Default is 196.2", function(g)
@@ -75,6 +75,13 @@ end)
 Tab1Section:NewLabel("Other")
 
 
+Tab1Section:NewButton("Teleport to lobby", "Teleports you to the lobby", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(228.31576538085938, 16.68985939025879, 548.6548461914062)
+
+end)
+
+
 Tab1Section:NewButton("Force Reset", "Resets your character", function()
 
 local player = game.Players.LocalPlayer
@@ -84,12 +91,22 @@ local player = game.Players.LocalPlayer
 
 end)
 
+Tab1Section:NewButton("Rejoin", "Rejoins the game", function()
 
-Tab1Section:NewButton("Teleport to lobby", "Teleports you to the lobby", function()
+    local TeleportService = game:GetService("TeleportService")
+    local Players = game:GetService("Players")
+    local LocalPlayer = Players.LocalPlayer
 
-local player = game.Players.LocalPlayer
-    if player.Character and player.Character:FindFirstChild("Humanoid") then
-        player.Character.Humanoid.Health = 0
-    end
+    local Rejoin = coroutine.create(function()
+        local Success, ErrorMessage = pcall(function()
+            TeleportService:Teleport(game.PlaceId, LocalPlayer)
+        end)
+
+        if ErrorMessage and not Success then
+            warn(ErrorMessage)
+        end
+    end)
+
+    coroutine.resume(Rejoin)
 
 end)
