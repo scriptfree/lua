@@ -1,0 +1,93 @@
+
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Loaded!";
+                Text = "Provided by xubs script! ";
+                Duration = 1.5;})
+
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("EXTERMINATOR", "DarkTheme") 
+
+
+local Tab1 = Window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Configs")
+
+
+
+Tab1Section:NewTextBox("Go to player", "Put in full username with punctuation", function(txt)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[txt].Character.HumanoidRootPart.CFrame
+
+end)
+
+Tab1Section:NewTextBox("Hitbox Size", "Sets Hitbox Size", function(hb)
+
+				_G.HeadSize = hb --ORIGINAL SIZE = 15
+_G.Disabled = true
+ 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+end)
+
+Tab1Section:NewTextBox("Jump Power", "Default is 50", function(jp)
+
+				game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = jp
+end)
+
+Tab1Section:NewTextBox("Hipheight", "Sets Hip Height", function(hh)
+
+				game.Players.LocalPlayer.Character.Humanoid.HipHeight = hh
+end)
+
+
+
+Tab1Section:NewLabel("Other")
+
+Tab1Section:NewButton("Aimlock", "Win!", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex", true))()
+
+end)
+
+
+
+Tab1Section:NewButton("Tp Tool", "Win!", function()
+
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "TP Tool"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+
+
+end)
+
+
+Tab1Section:NewButton("Force Reset", "Win!", function()
+
+local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Humanoid") then
+        player.Character.Humanoid.Health = 0
+    end
+
+end)
