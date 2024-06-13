@@ -1,4 +1,4 @@
-
+--Zero Delay FFA
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "Loaded!";
