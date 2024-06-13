@@ -54,39 +54,6 @@ end)
 
 
 
-Tab1Section:NewLabel("Other")
-
-
-
-Tab1Section:NewButton("Tp Tool", "Win!", function()
-
-mouse = game.Players.LocalPlayer:GetMouse()
-tool = Instance.new("Tool")
-tool.RequiresHandle = false
-tool.Name = "TP Tool"
-tool.Activated:connect(function()
-local pos = mouse.Hit+Vector3.new(0,2.5,0)
-pos = CFrame.new(pos.X,pos.Y,pos.Z)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
-end)
-tool.Parent = game.Players.LocalPlayer.Backpack
-
-
-
-end)
-
-
-Tab1Section:NewButton("Force Reset", "Win!", function()
-
-local player = game.Players.LocalPlayer
-    if player.Character and player.Character:FindFirstChild("Humanoid") then
-        player.Character.Humanoid.Health = 0
-    end
-
-end)
-
-
-
 Tab1Section:NewLabel("Modes")
 
 
@@ -102,3 +69,18 @@ Tab1Section:NewButton("Hardcore Mode", "Teleport", function()
 game:GetService("TeleportService"):Teleport(4301323950)
 
 end)
+
+
+
+Tab1Section:NewLabel("Other")
+
+
+Tab1Section:NewButton("Force Reset", "Win!", function()
+
+local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Humanoid") then
+        player.Character.Humanoid.Health = 0
+    end
+
+end)
+
