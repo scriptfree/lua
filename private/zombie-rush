@@ -15,9 +15,9 @@ local Tab1Section = Tab1:NewSection("Configs")
 
 
 
-Tab1Section:NewTextBox("Go to player", "Put in full username with punctuation", function(txt)
+Tab1Section:NewTextBox("Go to player", "Put in full username with punctuation", function(pl)
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[txt].Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[pl].Character.HumanoidRootPart.CFrame
 
 end)
 
@@ -29,6 +29,11 @@ end)
 Tab1Section:NewTextBox("Jump Power", "Default is 50", function(jp)
 
 				game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = jp
+end)
+
+Tab1Section:NewTextBox("Jump Power", "Default is 196.2", function(g)
+
+game.workspace.Gravity = g
 end)
 
 Tab1Section:NewToggle("Autobring all", nil, function(State)
@@ -70,7 +75,17 @@ end)
 Tab1Section:NewLabel("Other")
 
 
-Tab1Section:NewButton("Force Reset", "Win!", function()
+Tab1Section:NewButton("Force Reset", "Resets your character", function()
+
+local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Humanoid") then
+        player.Character.Humanoid.Health = 0
+    end
+
+end)
+
+
+Tab1Section:NewButton("Teleport to lobby", "Teleports you to the lobby", function()
 
 local player = game.Players.LocalPlayer
     if player.Character and player.Character:FindFirstChild("Humanoid") then
