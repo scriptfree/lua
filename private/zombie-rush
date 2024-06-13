@@ -54,6 +54,39 @@ bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 
 end)
 
+Tab1Section:NewToggle("Noclip", "Toggles noclip", function(state)
+    if state then
+        local noclip = true -- True for noclip and false for clip (Go through buildings or not)
+char = game.Players.LocalPlayer.Character -- Gets your player
+while true do -- Make sure someone is in game
+if noclip == true then
+for _,v in pairs(char:children()) do
+pcall(function()
+if v.className == "Part" then
+v.CanCollide = false
+end
+end)
+end
+end
+game:service("RunService").Stepped:wait()
+end
+    else
+        local noclip = false -- True for noclip and false for clip (Go through buildings or not)
+char = game.Players.LocalPlayer.Character -- Gets your player
+while true do -- Make sure someone is in game
+if noclip == true then
+for _,v in pairs(char:children()) do
+pcall(function()
+if v.className == "Part" then
+v.CanCollide = false
+end
+end)
+end
+end
+game:service("RunService").Stepped:wait()
+end
+    end
+end)
 
 
 Tab1Section:NewLabel("Modes")
