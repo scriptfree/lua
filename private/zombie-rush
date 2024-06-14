@@ -147,13 +147,19 @@ Tab2Section:NewLabel("Pinewood Forest")
 
 Tab2Section:NewButton("Waterfall", "Tp", function()
 
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(223.52032470703125, 16.68985939025879, 503.062744140625)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(192.85882568359375, 67.38750457763672, 2330.878662109375)
 
 end)
 
 Tab2Section:NewButton("Trees", "Tp", function()
 
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(179.2348175048828, 12.68985366821289, 2452.311767578125)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(250.2645721435547, 176.97793579101562, 2506.330322265625)
 
 end)
 
