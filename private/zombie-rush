@@ -469,3 +469,68 @@ Tab2Section:NewButton("Roof", "Tp", function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(282.1548767089844, 75.39830780029297, 2524.85400390625)
 
 end)
+
+
+
+Tab2Section:NewLabel("Shootout")
+
+
+
+Tab2Section:NewButton("Crate", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(211.3371124267578, 28.5937442779541, 2497.40234375)
+
+end)
+
+Tab2Section:NewButton("Behind barracade", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4.926540374755859, 7.92990779876709, 2518.581298828125)
+
+end)
+
+Tab2Section:NewButton("Outside Map", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-341.1170959472656, 7.92990779876709, 2413.4716796875)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(208.29541015625, 103.8148422241211, 2529.047607421875)
+
+end)
+
+
+
+Tab2Section:NewLabel("Snow Lodge")
+
+
+
+Tab2Section:NewButton("Lodge Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(226.47, 91.31, 2476.16)
+
+end)
+
+Tab2Section:NewButton("Police Cars", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(24913, 33.46, 2134.31)
+
+end)
+
+Tab2Section:NewButton("Christmas Tree", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.79, 65.16, 2463.13)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(224.59, 143.19, 2543.14)
+
+end)
+
+
+
+
+--Maps left: Flipside 
