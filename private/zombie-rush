@@ -562,9 +562,27 @@ end)
 
 
 
---Maps left: Flipside
+Tab2Section:NewLabel("Flipside")
 
 
+
+Tab2Section:NewButton("Inside Fence", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(133.05, -132.90, 2595.32)
+
+end)
+
+Tab2Section:NewButton("Police Cars", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-97.2, -133.93, 2647)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(157.05, -19.26, 2556.14)
+
+end)
 
 
 
