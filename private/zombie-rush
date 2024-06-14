@@ -433,3 +433,39 @@ Tab2Section:NewButton("Roof", "Tp", function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(282.1548767089844, 75.39830780029297, 2524.85400390625)
 
 end)
+
+
+Tab2Section:NewLabel("Liandri")
+
+
+
+Tab2Section:NewButton("Outside Map", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(64.40987396240234, 15.364848136901855, 2511.23095703125)
+
+end)
+
+Tab2Section:NewButton("Ground", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(245.96641540527344, 5.364574432373047, 2546.678955078125)
+
+end)
+
+Tab2Section:NewButton("Test Cube", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(229.95327758789062, 20.364919662475586, 2762.403076171875)
+
+end)
+
+Tab2Section:NewButton("Secret Area", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(183.94830322265625, 15.364838600158691, 2637.945068359375)
+
+end)
+
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(282.1548767089844, 75.39830780029297, 2524.85400390625)
+
+end)
