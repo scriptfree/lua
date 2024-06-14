@@ -366,3 +366,46 @@ Tab2Section:NewButton("Roof", "Tp", function()
 
 end)
 
+
+
+Tab2Section:NewLabel("Bloxywood")
+
+
+
+Tab2Section:NewButton("Top of sign", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-705.6409301757812, 55.03140640258789, -822.6015625)
+
+end)
+
+Tab2Section:NewButton("Main Building", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-617.0799560546875, 87.57967376708984, -664.4817504882812)
+
+end)
+
+Tab2Section:NewButton("Saloon Balcony", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-789.7667236328125, 29.46491050720215, -599.6923828125)
+
+end)
+
+Tab2Section:NewButton("County Jail", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-742.7876586914062, 16.46477699279785, -523.054443359375)
+
+end)
+
+Tab2Section:NewButton("Camp Spot", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-470.720458984375, 29.118717193603516, -577.64990234375)
+
+end)
+
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-617.0799560546875, 184.5995635986328, -664.4817504882812)
+
+end)
+
