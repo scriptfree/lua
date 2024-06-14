@@ -409,3 +409,27 @@ Tab2Section:NewButton("Roof", "Tp", function()
 
 end)
 
+
+
+Tab2Section:NewLabel("Spaceship")
+
+
+
+Tab2Section:NewButton("Outside Map", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(637.281005859375, -23.33176040649414, 2506.7734375)
+
+end)
+
+Tab2Section:NewButton("Insane camp spot", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(289.77587890625, 43.7647819519043, 2544.73828125)
+
+end)
+
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(282.1548767089844, 75.39830780029297, 2524.85400390625)
+
+end)
