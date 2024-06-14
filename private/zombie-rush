@@ -40,11 +40,6 @@ end)
 
 
 
-Tab1Section:NewButton("Noclip", "Enable or disable noclip", function()
-    toggleNoclip()
-end)
-
-
 
 
 
@@ -543,50 +538,9 @@ end)
 
 
 
---Maps left: Flipside 
+--Maps left: Flipside, Galactic Prison
 
 
 
 
 
---Noclip Script
-local player = game.Players.LocalPlayer
-
--- Function to ensure character is loaded
-local function getCharacter()
-    return player.Character or player.CharacterAdded:Wait()
-end
-
--- Boolean variable to keep track of the noclip state
-local noclipEnabled = false
-
--- Function to toggle noclip
-local function toggleNoclip()
-    noclipEnabled = not noclipEnabled
-    if noclipEnabled then
-        Kavo:Notification("Noclip", "Noclip enabled", 5)
-    else
-        Kavo:Notification("Noclip", "Noclip disabled", 5)
-    end
-end
-
--- Function to handle noclip
-local function onStepped()
-    local character = getCharacter()
-    if noclipEnabled and character then
-        for _, v in pairs(character:GetDescendants()) do
-            if v:IsA("BasePart") and v.CanCollide == true then
-                v.CanCollide = false
-            end
-        end
-    elseif character then
-        for _, v in pairs(character:GetDescendants()) do
-            if v:IsA("BasePart") and v.CanCollide == false then
-                v.CanCollide = true
-            end
-        end
-    end
-end
-
--- Connect the Stepped event to continuously update noclip state
-game:GetService("RunService").Stepped:Connect(onStepped)
