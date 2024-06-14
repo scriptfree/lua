@@ -553,12 +553,6 @@ Tab2Section:NewButton("Jail Cell", "Tp", function()
 
 end)
 
-Tab2Section:NewButton("Christmas Tree", "Tp", function()
-
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.79, 65.16, 2463.13)
-
-end)
-
 Tab2Section:NewButton("Roof", "Tp", function()
 
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(231.3153076171875, 36.06485366821289, 2555.286376953125)
@@ -568,7 +562,7 @@ end)
 
 
 
---Maps left: Flipside, Galactic Prison
+--Maps left: Flipside
 
 
 
