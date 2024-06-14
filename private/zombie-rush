@@ -11,7 +11,9 @@ local Window = Library.CreateLib("Zombie Rushmore Revived", "DarkTheme")
 
 
 local Tab1 = Window:NewTab("Main")
+local Tab2 = Window:NewTab("Teleports")
 local Tab1Section = Tab1:NewSection("Configs")
+local Tab2Section = Tab2:NewSection("Map TPS")
 
 
 
@@ -60,13 +62,6 @@ end)
 Tab1Section:NewLabel("Other")
 
 
-Tab1Section:NewButton("Teleport to lobby", "Teleports you to the lobby", function()
-
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(228.31576538085938, 16.68985939025879, 548.6548461914062)
-
-end)
-
-
 Tab1Section:NewButton("Force Reset", "Resets your character", function()
 
 local player = game.Players.LocalPlayer
@@ -93,5 +88,233 @@ Tab1Section:NewButton("Rejoin", "Rejoins the game", function()
     end)
 
     coroutine.resume(Rejoin)
+
+end)
+
+
+Tab2Section:NewButton("Lobby", "Teleports you to the lobby", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(228.31576538085938, 16.68985939025879, 548.6548461914062)
+
+end)
+
+Tab2Section:NewLabel("Space Station II")
+
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(353.02301025390625, 39.16487503051758, 2531.99755859375)
+
+end)
+
+Tab2Section:NewButton("Upstair Walls", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(204.04733276367188, 12.164838790893555, 2534.28271484375)
+
+end)
+
+Tab2Section:NewButton("Secret Room", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(196.97459411621094, -23.835161209106445, 2714.673583984375)
+
+end)
+
+
+Tab2Section:NewLabel("Cave II")
+
+
+Tab2Section:NewButton("Cave", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-220.12107849121094, 22.00044059753418, -585.0872192382812)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-126.06169891357422, 193.433837890625, -518.6350708007812)
+
+end)
+
+Tab2Section:NewButton("Floor", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-131.5499267578125, 11.73382568359375, -491.3150939941406)
+
+end)
+
+
+Tab2Section:NewLabel("Pinewood Forest")
+
+
+Tab2Section:NewButton("Waterfall", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(223.52032470703125, 16.68985939025879, 503.062744140625)
+
+end)
+
+Tab2Section:NewButton("Trees", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(179.2348175048828, 12.68985366821289, 2452.311767578125)
+
+end)
+
+
+
+Tab2Section:NewLabel("Space Noxx")
+
+
+Tab2Section:NewButton("2nd Floor Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(227.05349731445312, 85.26431274414062, 2574.233154296875)
+
+end)
+
+Tab2Section:NewButton("Orb Walls", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(233.9205322265625, 85.0086898803711, 2535.318359375)
+
+end)
+
+Tab2Section:NewButton("Camp Spot", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(320.41748046875, 85.26460266113281, 2526.17041015625)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.68055725097656, 137.86422729492188, 2526.60107421875)
+
+end)
+
+
+Tab2Section:NewLabel("Volcano Lab")
+
+
+Tab2Section:NewButton("Statues", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(262.53985595703125, 22.359712600708008, 2459.076416015625)
+
+end)
+
+Tab2Section:NewButton("Outside Map", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(252.73155212402344, 15.57180404663086, 2370.20751953125)
+
+end)
+
+Tab2Section:NewButton("Slime Launcher ONLY", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(96.9720230102539, 15.571802139282227, 2369.082763671875)
+
+end)
+
+Tab2Section:NewButton("Outside Lab", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(254.2231903076172, 29.544036865234375, 2566.97900390625)
+
+end)
+
+Tab2Section:NewButton("Pipe Window Display", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(254.2231903076172, 29.544036865234375, 2566.97900390625)
+
+end)
+
+Tab2Section:NewButton("Red Circle Tube", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(126.31979370117188, 17.56591033935547, 2501.44970703125)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(245.21197509765625, 53.56510543823242, 2530.5888671875)
+
+end)
+
+
+Tab2Section:NewLabel("Corrosion")
+
+Tab2Section:NewButton("Blue Test Tube", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(247.86358642578125, 17.661006927490234, 2616.204345703125)
+
+end)
+
+Tab2Section:NewButton("Red Test Tube", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(287.2774353027344, 17.66337776184082, 2667.071044921875)
+
+end)
+
+Tab2Section:NewButton("Green Test Tube", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(50.57777786254883, 39.06351089477539, 2620.0458984375)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(238.18008422851562, 66.66484832763672, 2633.659423828125)
+
+end)
+
+
+Tab2Section:NewLabel("Bio Lab")
+
+Tab2Section:NewButton("Mountain", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(135.70350646972656, 109.91504669189453, 2715.262939453125)
+
+end)
+
+Tab2Section:NewButton("Generator", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(233.9027862548828, 23.96485710144043, 2493.865966796875)
+
+end)
+
+Tab2Section:NewButton("Glitch spot", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(283.6610107421875, 21.686674118041992, 2428.200927734375)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(221.4931182861328, 39.47678756713867, 2533.7412109375)
+
+end)
+
+
+Tab2Section:NewLabel("Candyland")
+
+Tab2Section:NewButton("Chimney", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(190.19190979003906, 46.97513198852539, 2456.83447265625)
+
+end)
+
+Tab2Section:NewButton("Outside Map", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-75.98754119873047, 9.975335121154785, 2497.988037109375)
+
+end)
+
+Tab2Section:NewButton("Browney", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76.36270141601562, 35.525936126708984, 2597.401123046875)
+
+end)
+
+Tab2Section:NewButton("Cake Slice", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(116.63835906982422, 52.59879684448242, 2694.850341796875)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(163.47288513183594, 75.97113037109375, 2447.861572265625)
 
 end)
