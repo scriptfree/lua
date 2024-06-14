@@ -1,0 +1,28 @@
+--Zombie Rush
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("Testing Loader", "DarkTheme") 
+
+
+local Tab1 = Window:NewTab("Main")
+
+local Tab1Section = Tab1:NewSection("Everything Needed!")
+
+
+Tab1Section:NewButton("Infinite Yield", "s", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
+
+Tab1Section:NewButton("Coordinate Grabber", "s", function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/GdmzzrDz", true))()
+
+end)
+
+Tab1Section:NewButton("Actual Script", "s", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptfree/lua/main/private/zombie-rush"))()
+
+end)
