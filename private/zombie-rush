@@ -318,9 +318,15 @@ Tab2Section:NewButton("Glitch spot", "Tp", function()
 
 end)
 
-Tab2Section:NewButton("Roof", "Tp", function()
+Tab2Section:NewButton("Building Roof", "Tp", function()
 
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(221.4931182861328, 39.47678756713867, 2533.7412109375)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(220.51, 242.87, 2601.31)
 
 end)
 
