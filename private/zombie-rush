@@ -289,11 +289,7 @@ end)
 
 Tab2Section:NewLabel("Candyland")
 
-Tab2Section:NewButton("Chimney", "Tp", function()
 
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(190.19190979003906, 46.97513198852539, 2456.83447265625)
-
-end)
 
 Tab2Section:NewButton("Outside Map", "Tp", function()
 
@@ -301,15 +297,9 @@ Tab2Section:NewButton("Outside Map", "Tp", function()
 
 end)
 
-Tab2Section:NewButton("Browney", "Tp", function()
-
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76.36270141601562, 35.525936126708984, 2597.401123046875)
-
-end)
-
 Tab2Section:NewButton("Cake Slice", "Tp", function()
 
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(116.63835906982422, 52.59879684448242, 2694.850341796875)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(103.91739654541016, 22.61052894592285, 2702.19189453125)
 
 end)
 
