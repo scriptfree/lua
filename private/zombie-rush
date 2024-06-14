@@ -341,3 +341,28 @@ Tab2Section:NewButton("Roof", "Tp", function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(163.47288513183594, 75.97113037109375, 2447.861572265625)
 
 end)
+
+
+
+Tab2Section:NewLabel("Catacombs")
+
+
+
+Tab2Section:NewButton("Main Statue", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(762.8659057617188, 101.74471282958984, 2525.88330078125)
+
+end)
+
+Tab2Section:NewButton("Camp Spot", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(769.6647338867188, 87.39817810058594, 2474.34130859375)
+
+end)
+
+Tab2Section:NewButton("Roof", "Tp", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(711.73974609375, 244.5648651123047, 2512.58447265625)
+
+end)
+
