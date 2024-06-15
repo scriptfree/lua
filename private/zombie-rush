@@ -39,7 +39,21 @@ game.workspace.Gravity = g
 end)
 
 
-
+Tab1Section:NewToggle("Autobring all (Not working)", nil, function(State)
+cool = State
+game:GetService("RunService").Stepped:connect(
+    function()
+        if cool then
+            for i, v in pairs(game:GetService("Workspace")["Zombie Storage"]:GetDescendants()) do
+                if v:IsA("Part") and v.Name ~= "Head" then
+                    v.CanCollide = false
+                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -9)
+                end
+            end
+        end
+    end
+)
+end)
 
 
 
