@@ -11,7 +11,9 @@ local Window = Library.CreateLib("testtest", "DarkTheme")
 local Tab1 = Window:NewTab("e")
 local Tab1Section = Tab1:NewSection("e")
 
-Tab1Section:NewTextBox("Anti Death TP", "eeee", function(pl)
+Tab1Section:NewButton("Anti Death TP", "eeee", function()
+
+local UserInputService = game:GetService("UserInputService")
 
 -- Define the coordinates to teleport to
 local coordinates = {
