@@ -16,6 +16,83 @@ local Tab1Section = Tab1:NewSection("Configs")
 local Tab2Section = Tab2:NewSection("Map TPS")
 
 
+--Liandri TP
+
+
+local teleportingEnabled = false
+
+-- Function to teleport the player to given coordinates
+local function teleportTo(position)
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+        print("Teleporting to coordinates: " .. tostring(position))
+    end
+end
+
+-- Function to create a delay
+local function delay(seconds)
+    local start = tick()
+    while tick() - start < seconds do
+        wait()
+    end
+end
+
+-- Function to start teleportation
+local function startTeleportation()
+    for i = 1, #coordinates do
+        if not teleportingEnabled then
+            break
+        end
+        teleportTo(coordinates[i])
+        delay(1.5)
+    end
+end
+
+-- Function to toggle teleportation
+local function toggleTeleportation()
+    teleportingEnabled = not teleportingEnabled
+    if teleportingEnabled then
+        startTeleportation()
+    else
+        print("Teleportation stopped.")
+    end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Tab1Section:NewTextBox("Go to player", "Put in full username with punctuation", function(pl)
 
@@ -494,6 +571,21 @@ Tab2Section:NewButton("Roof", "Tp", function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(282.1548767089844, 75.39830780029297, 2524.85400390625)
 
 end)
+
+Section:NewToggle("Anti Death TP", "Teleports you incase the phantom boss attacks.", function(state)
+    if state then
+        teleportingEnabled = true
+        startTeleportation()
+    else
+        teleportingEnabled = false
+    end
+end)
+
+
+
+
+
+
 
 
 
