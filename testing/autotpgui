@@ -1,0 +1,83 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Loaded!";
+                Text = "Provided by xubs script! ";
+                Duration = 1.5;})
+
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("testtest", "DarkTheme") 
+
+
+local Tab1 = Window:NewTab("e")
+local Tab1Section = Tab1:NewSection("e")
+
+-- Services
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+
+-- Player reference
+local player = Players.LocalPlayer
+
+-- Kavo UI Library setup
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/FsJak6AT"))() -- Replace with the actual URL of the Kavo UI Library
+local Window = Library.CreateLib("Teleportation GUI", "DarkTheme")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Teleportation")
+
+-- Define the coordinates to teleport to
+local coordinates = {
+    Vector3.new(100, 0, 200),
+    Vector3.new(300, 0, 400),
+    Vector3.new(500, 0, 600),
+    Vector3.new(700, 0, 800)
+}
+
+-- Variable to control the teleportation toggle
+local teleportingEnabled = false
+
+-- Function to teleport the player to given coordinates
+local function teleportTo(position)
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+        print("Teleporting to coordinates: " .. tostring(position))
+    end
+end
+
+-- Function to create a delay
+local function delay(seconds)
+    local start = tick()
+    while tick() - start < seconds do
+        wait()
+    end
+end
+
+-- Function to start teleportation
+local function startTeleportation()
+    for i = 1, #coordinates do
+        if not teleportingEnabled then
+            break
+        end
+        teleportTo(coordinates[i])
+        delay(1.5)
+    end
+end
+
+-- Function to toggle teleportation
+local function toggleTeleportation()
+    teleportingEnabled = not teleportingEnabled
+    if teleportingEnabled then
+        startTeleportation()
+    else
+        print("Teleportation stopped.")
+    end
+end
+
+
+Tab1Section:NewToggle("Toggle Teleportation", "Toggles the teleportation process", function(state)
+    if state then
+        teleportingEnabled = true
+        startTeleportation()
+    else
+        teleportingEnabled = false
+    end
+end)
