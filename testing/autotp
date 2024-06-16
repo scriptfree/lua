@@ -1,3 +1,5 @@
+local UserInputService = game:GetService("UserInputService")
+
 -- Define the coordinates to teleport to
 local coordinates = {
     Vector3.new(228.31576538085938, 16.68985939025879, 548.6548461914062),
