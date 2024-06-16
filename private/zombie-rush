@@ -499,7 +499,7 @@ Tab2Section:NewButton("Roof", "Tp", function()
 
 end)
 
-Tab1Section:NewButton("Anti Death TP", "Prevents you from dying from the super phantom boss.", function()
+Tab2Section:NewButton("Anti Death TP", "Prevents you from dying from the super phantom boss.", function()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptfree/lua/main/testing/autotp",true))()
 
