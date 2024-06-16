@@ -2,10 +2,10 @@ local UserInputService = game:GetService("UserInputService")
 
 -- Define the coordinates to teleport to
 local coordinates = {
-    Vector3.new(228.31576538085938, 16.68985939025879, 548.6548461914062),
-    Vector3.new(152.9490509033203, 5.364573955535889, 2657.137939453125),
-    Vector3.new(151.3494873046875, 5.364573955535889, 2675.022216796875),
-    Vector3.new(139.44200134277344, 5.364573955535889, 2673.5693359375)
+    Vector3.new(140.2327880859375, 5.3645758628845215, 2643.800537109375),
+    Vector3.new(155.36892700195312, 5.364575386047363, 2644.158935546875),
+    Vector3.new(155.76535034179688, 5.364575386047363, 2661.097900390625),
+    Vector3.new(140.24253845214844, 5.364575386047363, 2661.25830078125)
 }
 
 -- Function to teleport the player to given coordinates
@@ -25,8 +25,10 @@ local function delay(seconds)
     end
 end
 
--- Teleport to each coordinate with a 1.5-second delay
-for i = 1, #coordinates do
-    teleportTo(coordinates[i])
-    delay(1.5)
+-- Infinite loop to teleport to each coordinate with a 1.5-second delay
+while true do
+    for i = 1, #coordinates do
+        teleportTo(coordinates[i])
+        delay(1.5)
+    end
 end
