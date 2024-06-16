@@ -13,37 +13,6 @@ local Tab1Section = Tab1:NewSection("e")
 
 Tab1Section:NewButton("Anti Death TP", "eeee", function()
 
-local UserInputService = game:GetService("UserInputService")
-
--- Define the coordinates to teleport to
-local coordinates = {
-    Vector3.new(228.31576538085938, 16.68985939025879, 548.6548461914062),
-    Vector3.new(152.9490509033203, 5.364573955535889, 2657.137939453125),
-    Vector3.new(151.3494873046875, 5.364573955535889, 2675.022216796875),
-    Vector3.new(139.44200134277344, 5.364573955535889, 2673.5693359375)
-}
-
--- Function to teleport the player to given coordinates
-local function teleportTo(position)
-    local player = game.Players.LocalPlayer
-    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-        player.Character.HumanoidRootPart.CFrame = CFrame.new(position)
-        print("Teleporting to coordinates: " .. tostring(position))
-    end
-end
-
--- Function to create a delay
-local function delay(seconds)
-    local start = tick()
-    while tick() - start < seconds do
-        wait()
-    end
-end
-
--- Teleport to each coordinate with a 1.5-second delay
-for i = 1, #coordinates do
-    teleportTo(coordinates[i])
-    delay(1.5)
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptfree/lua/main/testing/autotp",true))()
 
 end)
