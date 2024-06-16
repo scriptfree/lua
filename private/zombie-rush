@@ -572,7 +572,7 @@ Tab2Section:NewButton("Roof", "Tp", function()
 
 end)
 
-Section:NewToggle("Anti Death TP", "Teleports you incase the phantom boss attacks.", function(state)
+Tab2Section:NewToggle("Anti Death TP", "Teleports you incase the phantom boss attacks.", function(state)
     if state then
         teleportingEnabled = true
         startTeleportation()
