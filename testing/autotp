@@ -1,4 +1,3 @@
-local UserInputService = game:GetService("UserInputService")
 
 -- Define the coordinates to teleport to
 local coordinates = {
@@ -25,7 +24,7 @@ local function delay(seconds)
     end
 end
 
--- Infinite loop to teleport to each coordinate with a 1.5-second delay
+-- Infinite loop to teleport to each cooardinate with a 1.5-second delay
 while true do
     for i = 1, #coordinates do
         teleportTo(coordinates[i])
