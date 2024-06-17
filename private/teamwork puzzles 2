@@ -1,2 +1,61 @@
--4 Player World
+--4 Player World
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(793.4686889648438, 33.66233444213867, 145.6354522705078)
+wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(269.0845947265625, 106.3034439086914, -27601.568359375)
+
+
+
+
+
+
+
+
+-- LocalScript placed in StarterPlayerScripts
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local userInputService = game:GetService("UserInputService")
+
+-- Define the coordinates
+local teleportPosition = Vector3.new(-11483.1123046875, 101.8333740234375, 2944.990966796875)  -- Change this to your desired teleport position
+local walkToPosition = Vector3.new(-11488.279296875, 101.8333740234375, 2944.990966796875)  -- Change this to your desired walk position
+
+-- Function to teleport to the first coordinate
+local function teleportToFirstPosition()
+    humanoidRootPart.CFrame = CFrame.new(teleportPosition)
+    print("Teleported to first position.")
+end
+
+-- Function to walk to the second coordinate
+local function walkToSecondPosition()
+    humanoid:MoveTo(walkToPosition)
+    humanoid.MoveToFinished:Wait()  -- Wait until the character reaches the position
+    print("Reached second position.")
+end
+
+-- Function to handle the whole process
+local function teleportAndWalk()
+    teleportToFirstPosition()
+    wait(0.1)  -- Small delay to ensure teleportation completes
+    walkToSecondPosition()
+end
+
+-- Connect the function to the "E" key press
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.E and not gameProcessed then
+        print("E key pressed. Starting teleport and walk.")
+        teleportAndWalk()
+    end
+end)
+
+-- Ensure the character and humanoidRootPart are properly set when respawning
+player.CharacterAdded:Connect(function(char)
+    character = char
+    humanoid = character:WaitForChild("Humanoid")
+    humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+end)
+
+-- Debug prints to ensure script runs
+print("Script loaded. Press E to teleport and walk.")
