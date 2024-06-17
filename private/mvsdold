@@ -313,7 +313,7 @@ Tab6Section:NewTextBox("Go to player", "Teleports you to a player", function(txt
 end)
 
 
-Tab6Section:NewTextBox("Go to player", "Teleports you to a player", function(ws)
+Tab6Section:NewTextBox("Speed Changer", "Changes your player walkspeed", function(ws)
 
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
 
