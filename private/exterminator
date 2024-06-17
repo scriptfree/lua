@@ -1,5 +1,15 @@
 --Zero Delay FFA
 
+
+--DASH
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local userInputService = game:GetService("UserInputService")
+local cooldown = 1
+local canDash = true
+
+
 game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "Loaded!";
                 Text = "Provided by xubs script! ";
@@ -12,6 +22,42 @@ local Window = Library.CreateLib("EXTERMINATOR", "DarkTheme")
 
 local Tab1 = Window:NewTab("Main")
 local Tab1Section = Tab1:NewSection("Configs")
+
+
+-- DASH
+
+local function dash()
+    if canDash then
+        canDash = false
+
+        -- Apply a forward force to the player's character
+        local dashDirection = humanoidRootPart.CFrame.lookVector * 85 -- Adjust the multiplier to set dash distance
+        humanoidRootPart.Velocity = dashDirection
+
+        -- Print for debug purposes
+        print("Dashing forward!")
+
+        -- Wait for the cooldown duration
+        wait(cooldown)
+
+        -- Reset dash ability
+        canDash = true
+
+        -- Print for debug purposes
+        print("Dash is ready again!")
+    end
+end
+
+--dash
+player.CharacterAdded:Connect(function(char)
+    character = char
+    humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+end)
+
+
+
+
+
 
 
 
@@ -56,6 +102,12 @@ end)
 
 
 Tab1Section:NewLabel("Other")
+
+
+Tab6Section:NewKeybind("Dash", "Press Q to dash", Enum.KeyCode.Q, function()
+    dash()
+end)
+
 
 Tab1Section:NewButton("Aimlock", "Win!", function()
 
