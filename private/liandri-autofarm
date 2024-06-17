@@ -19,6 +19,12 @@ local Tab1Section = Tab1:NewSection("The stuff")
 
 Tab1Section:NewLabel("Adding more soon.")
 
+Tab1Section:NewButton("Ground", "Makes your character walk back and forth to avoid dying.", function()
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.28082275390625, 5.3645734786987305, 2563.12353515625)
+
+end)
+
 Tab1Section:NewButton("Back and Forth Walk", "Makes your character walk back and forth to avoid dying.", function()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptfree/lua/main/testing/walkto"))()
