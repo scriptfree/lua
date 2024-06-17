@@ -45,7 +45,7 @@ local function dash()
         canDash = false
 
         -- Apply a forward force to the player's character
-        local dashDirection = humanoidRootPart.CFrame.lookVector * 75 -- Adjust the multiplier to set dash distance
+        local dashDirection = humanoidRootPart.CFrame.lookVector * 85 -- Adjust the multiplier to set dash distance
         humanoidRootPart.Velocity = dashDirection
 
         -- Print for debug purposes
