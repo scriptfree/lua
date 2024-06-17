@@ -1,0 +1,345 @@
+--MVSD Archive
+
+
+
+
+--Dash Config
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local userInputService = game:GetService("UserInputService")
+local cooldown = 1
+local canDash = true
+
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Loaded!";
+                Text = "Provided by xubs script! ";
+                Duration = 1.5;})
+
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("xub's scripts - MVSD", "DarkTheme") 
+
+
+local Tab1 = Window:NewTab("Prototype")
+local Tab2 = Window:NewTab("Ridge")
+local Tab3 = Window:NewTab("Central")
+local Tab4 = Window:NewTab("Aerial")
+local Tab5 = Window:NewTab("Lodge")
+local Tab6 = Window:NewTab("Extra")
+local Tab1Section = Tab1:NewSection("TPS")
+local Tab2Section = Tab2:NewSection("TPS")
+local Tab3Section = Tab3:NewSection("TPS")
+local Tab4Section = Tab4:NewSection("TPS")
+local Tab5Section = Tab5:NewSection("TPS")
+local Tab6Section = Tab6:NewSection("Extra")
+
+
+
+-- DASH
+
+local function dash()
+    if canDash then
+        canDash = false
+
+        -- Apply a forward force to the player's character
+        local dashDirection = humanoidRootPart.CFrame.lookVector * 150 -- Adjust the multiplier to set dash distance
+        humanoidRootPart.Velocity = dashDirection
+
+        -- Print for debug purposes
+        print("Dashing forward!")
+
+        -- Wait for the cooldown duration
+        wait(cooldown)
+
+        -- Reset dash ability
+        canDash = true
+
+        -- Print for debug purposes
+        print("Dash is ready again!")
+    end
+end
+
+--dash
+player.CharacterAdded:Connect(function(char)
+    character = char
+    humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+end)
+
+
+
+
+Tab1Section:NewButton("Side 1", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.20396423339844, 63.999977111816406, 73.34662628173828)
+
+end)
+
+Tab1Section:NewButton("Side 2", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(20.67986297607422, 63.9999885559082, -75.26228332519531)
+
+end)
+
+Tab1Section:NewButton("Roof Side 1", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(101.09745788574219, 105.98550415039062, 7.918412208557129)
+
+end)
+
+Tab1Section:NewButton("Roof Side 2", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.859733581542969, 111.99819946289062, -7.118766784667969)
+
+end)
+
+
+
+Tab2Section:NewButton("Side 1", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-138.8106231689453, 155.6245880126953, -71.18352508544922)
+
+end)
+
+Tab2Section:NewButton("Side 2", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-184.69187927246094, 155.6245880126953, 79.59825897216797)
+
+end)
+
+Tab2Section:NewButton("Side 1 Bridge", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-152.34078979492188, 165.37484741210938, 6.0270676612854)
+
+end)
+
+Tab2Section:NewButton("Side 2 Bridge", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-170.2440643310547, 165.37484741210938, 3.115605592727661)
+
+end)
+
+Tab2Section:NewButton("Side 1 Ramp", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-163.30780029296875, 155.62461853027344, -33.4439811706543)
+
+end)
+
+Tab2Section:NewButton("Side 2 Ramp", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-160.45455932617188, 155.62460327148438, 40.98515701293945)
+
+end)
+
+
+
+
+
+Tab3Section:NewButton("Side 1", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-119.12476348876953, 106.24996948242188, -195.55206298828125)
+
+end)
+
+Tab3Section:NewButton("Side 2", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.16967010498047, 106.2499771118164, -322.84552001953125)
+
+end)
+
+Tab3Section:NewButton("Side 1 Wall", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-56.40330505371094, 112.24996185302734, -210.68948364257812)
+
+end)
+
+Tab3Section:NewButton("Side 2 Wall", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-49.55787658691406, 112.24995422363281, -302.6794128417969)
+
+end)
+
+Tab3Section:NewButton("Tunnel", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-161.53086853027344, 99.00000762939453, -332.6668701171875)
+
+end)
+
+
+
+Tab4Section:NewButton("Side 1", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-165.39112854003906, 63.499996185302734, 272.20465087890625)
+
+end)
+
+Tab4Section:NewButton("Side 2", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-210.38243103027344, 62.33999252319336, 145.50653076171875)
+
+end)
+
+Tab4Section:NewButton("Crates", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-278.3145446777344, 49.7499885559082, 245.68576049804688)
+
+end)
+
+
+Tab5Section:NewButton("Side 1", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(188.26878356933594, 57.769996643066406, 47.682395935058594)
+
+end)
+
+Tab5Section:NewButton("Side 2", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(204.2458038330078, 58.769996643066406, -69.79301452636719)
+
+end)
+
+Tab5Section:NewButton("Tunnel", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(194.2428741455078, 50.769996643066406, -1.3099273443222046)
+
+end)
+
+Tab5Section:NewButton("Closet", "Win!", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(255.31143188476562, 60.77000427246094, -23.884252548217773)
+
+end)
+
+
+
+Tab6Section:NewKeybind("Dash", "Press Q to dash", Enum.KeyCode.Q, function()
+    dash()
+end)
+
+
+Tab6Section:NewTextBox("Go to player", "Teleports you to a player", function(txt)
+
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[txt].Character.HumanoidRootPart.CFrame
+end)
+
+
+
+Tab6Section:NewSlider("Speed Changer", "Walkspeed", 100, 16, function(ws)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
+end)
+
+Tab6Section:NewTextBox("Hitbox Size", "Sets the hitbox size", function(hb)
+
+				_G.HeadSize = hb
+_G.Disabled = true
+ 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+
+
+end)
+
+
