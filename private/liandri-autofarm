@@ -24,3 +24,9 @@ Tab1Section:NewButton("Back and Forth Walk", "Makes your character walk back and
 loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptfree/lua/main/testing/walkto"))()
 
 end)
+
+Tab1Section:NewButton("Noclip (Infinite Yield)", "Infinite Yield", function()
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
