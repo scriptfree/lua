@@ -1,0 +1,25 @@
+-- Define the coordinates to move to
+local target1 = Vector3.new(224.66806030273438, 5.3645734786987305, 2563.09228515625)
+local target2 = Vector3.new(254.6009521484375, 5.364573955535889, 2564.553466796875)
+
+-- Function to move the character to a specified coordinate
+function moveTo(target)
+    local character = game.Players.LocalPlayer.Character
+    local humanoid = character:WaitForChild("Humanoid")
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+    
+    -- Use Humanoid:MoveTo to move the character
+    humanoid:MoveTo(target)
+    humanoid.MoveToFinished:Wait()
+end
+
+-- Main script execution
+while true do
+    moveTo(target1)
+    print("Reached target 1")
+    wait(1) -- Wait for 1 second before moving to the next target
+    
+    moveTo(target2)
+    print("Reached target 2")
+    wait(1) -- Wait for 1 second before moving back to the first target
+end
