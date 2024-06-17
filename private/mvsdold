@@ -313,10 +313,12 @@ Tab6Section:NewTextBox("Go to player", "Teleports you to a player", function(txt
 end)
 
 
+Tab6Section:NewTextBox("Go to player", "Teleports you to a player", function(ws)
 
-Tab6Section:NewSlider("Speed Changer", "Walkspeed", 100, 16, function(ws)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
+
 end)
+
 
 Tab6Section:NewTextBox("Hitbox Size", "Sets the hitbox size", function(hb)
 
