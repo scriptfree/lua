@@ -104,7 +104,7 @@ end)
 Tab1Section:NewLabel("Other")
 
 
-Tab6Section:NewKeybind("Dash", "Press Q to dash", Enum.KeyCode.Q, function()
+Tab1Section:NewKeybind("Dash", "Press Q to dash", Enum.KeyCode.Q, function()
     dash()
 end)
 
