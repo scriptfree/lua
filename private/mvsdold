@@ -9,7 +9,7 @@ local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 local userInputService = game:GetService("UserInputService")
-local cooldown = 1
+local cooldown = 0 --ORIGINAL IS 1
 local canDash = true
 
 
