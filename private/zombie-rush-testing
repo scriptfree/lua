@@ -74,6 +74,11 @@ end
 
 end)
 
+Tab2Section:NewButton("Go to lobby", "Tps you to the lobby for safe autofarming", function()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(228.31576538085938, 16.68985939025879, 548.6548461914062)
+
+end)
 
 
 
