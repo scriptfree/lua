@@ -1,3 +1,4 @@
+-- Gun mod configuration/settings
 local opGun = false
 
 -- Modifies weapon to be OP
