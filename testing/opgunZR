@@ -1,0 +1,62 @@
+local opGun = false
+
+-- Modifies weapon to be OP
+function opWeapon(tool)
+	if isGun(tool) then
+		local con = tool.Configuration
+		if con.Range.Value ~= 9999 then
+			con.Range.Value = 9999
+			con.FullAuto.Value = true
+			con.Spread.Value = 0
+			-- con.Burst.Value = 2
+			con.Firerate.Value = 75
+			con.Damage.Value = 99999
+			tool.GunController.Disabled = true
+			tool.GunController.Disabled = false
+		end
+
+	end
+end
+
+-- Checks if tool is gun
+function isGun(tool)
+	local returnValue = false
+	if tool then
+		if tool.ClassName == "Tool" and tool:FindFirstChild("Configuration") and tool:FindFirstChild("GunController") then
+			returnValue = true
+		end
+	end
+	return returnValue
+end
+
+
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("Zombie Rush Testing - GUN MOD", "DarkTheme") 
+
+
+local Tab1 = Window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Configs")
+
+
+
+Tab1Section:NewToggle("Autobring all (Not working)", nil, function(bool)
+
+shared.toggle = bool
+	opGun = bool
+--local tool = player.Character:FindFirstChildWhichIsA("Tool")
+	--if tool then
+	--	opWeapon(tool)
+	--end
+	--[[
+if bool then
+
+local tool = player.Character:FindFirstChildWhichIsA("Tool")
+		if tool then
+			opWeapon(tool)
+		end
+		wait(1)
+	end
+	--]]
+	
+end)
