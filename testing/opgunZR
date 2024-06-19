@@ -41,7 +41,7 @@ local Tab1Section = Tab1:NewSection("Configs")
 
 
 
-Tab1Section:NewToggle("Autobring all (Not working)", nil, function(bool)
+Tab1Section:NewToggle("Gun Mod", nil, function(bool)
 
 shared.toggle = bool
 	opGun = bool
