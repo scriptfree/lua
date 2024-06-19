@@ -46,7 +46,7 @@ game:GetService("RunService").Stepped:connect(
 )
 end)
 
-Tab1Section:NewButton("AUTOKILL ALL", "askjdkasdasd", function()
+Tab1Section:NewButton("Autokill all", "askjdkasdasd", function()
 
         local player = game.Players.LocalPlayer
 
