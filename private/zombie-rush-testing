@@ -13,7 +13,7 @@ local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))()
 local Window = Library.CreateLib("Zombie Rushmore Revived", "DarkTheme") 
 
 
-local Tab1 = Window:NewTab("😮")
+local Tab1 = Window:NewTab("Main")
 local Tab1Section = Tab1:NewSection("MAIN")
 
 
@@ -30,7 +30,7 @@ Tab1Section:NewTextBox("Jump Power", "Default is 50", function(jp)
         game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = jp
 end)
 
-Tab1Section:NewToggle("Autobring all (Not working)", nil, function(State)
+Tab1Section:NewToggle("Autobring all", nil, function(State)
 cool = State
 game:GetService("RunService").Stepped:connect(
     function()
