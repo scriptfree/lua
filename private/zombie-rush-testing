@@ -10,11 +10,11 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 
 
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
-local Window = Library.CreateLib("Zombie Rushmore Revived", "DarkTheme") 
+local Window = Library.CreateLib("Zombie Rushmore", "DarkTheme") 
 
 
 local Tab1 = Window:NewTab("Main")
-local Tab1Section = Tab1:NewSection("MAIN")
+local Tab1Section = Tab1:NewSection("All Scripts")
 
 
 
