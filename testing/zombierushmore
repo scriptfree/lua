@@ -162,7 +162,7 @@ end
 
 
 
-local library = loadstring(game:HttpGet(('https://pastebin.com/raw/9VwYJsHA')))() -- It's obfuscated, I won't let you see my ugly coding skills. =)
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3")() -- It's obfuscated, I won't let you see my ugly coding skills. =)
 
 local w = library:CreateWindow("Zombie Rushmore")
 
