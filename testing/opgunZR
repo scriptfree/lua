@@ -41,23 +41,23 @@ local Tab1Section = Tab1:NewSection("Configs")
 
 
 
-Tab1Section:NewToggle("Gun Mod", nil, function(bool)
+Tab1Section:NewButton("Gun Mod", Makes gun op, function(bool)
 
 shared.toggle = bool
 	opGun = bool
-local tool = player.Character:FindFirstChildWhichIsA("Tool")
+	local tool = player.Character:FindFirstChildWhichIsA("Tool")
 	if tool then
 		opWeapon(tool)
-	end
-
-white bool do
-
-local tool = player.Character:FindFirstChildWhichIsA("Tool")
+	--end
+	--[[
+    while bool do
+		local tool = player.Character:FindFirstChildWhichIsA("Tool")
 		if tool then
 			opWeapon(tool)
 		end
 		wait(1)
 	end
+	--]]
 
 	
 end)
