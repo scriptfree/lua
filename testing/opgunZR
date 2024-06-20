@@ -45,12 +45,12 @@ Tab1Section:NewToggle("Gun Mod", nil, function(bool)
 
 shared.toggle = bool
 	opGun = bool
---local tool = player.Character:FindFirstChildWhichIsA("Tool")
-	--if tool then
-	--	opWeapon(tool)
-	--end
-	--[[
-if bool then
+local tool = player.Character:FindFirstChildWhichIsA("Tool")
+	if tool then
+		opWeapon(tool)
+	end
+
+white bool do
 
 local tool = player.Character:FindFirstChildWhichIsA("Tool")
 		if tool then
@@ -58,6 +58,6 @@ local tool = player.Character:FindFirstChildWhichIsA("Tool")
 		end
 		wait(1)
 	end
-	--]]
+
 	
 end)
