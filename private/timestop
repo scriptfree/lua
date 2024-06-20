@@ -20,7 +20,7 @@ Tab1Section:NewSlider("Speed Changer", "Walkspeed", 100, 16, function(ws)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
 end)
 
-Tab1Section:NewSlider("Timestop Changer", "Timestop state", 3, 0, function(ts)
+Tab1Section:NewSlider("Timestop Changer", "Timestop state", 3, 2, function(ts)
     _G.HeadSize = ts
 _G.Disabled = true
  
