@@ -99,6 +99,12 @@ Tab1Section:NewTextBox("Hipheight", "Sets Hip Height", function(hh)
 				game.Players.LocalPlayer.Character.Humanoid.HipHeight = hh
 end)
 
+Tab1Section:NewTextBox("Dash Cooldown", "Sets the dash cooldown", function(dcd)
+
+local cooldown = dcd
+
+end)
+
 
 
 Tab1Section:NewLabel("Other")
