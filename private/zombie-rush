@@ -142,7 +142,7 @@ Tab1Section:NewKeybind("Dash", "Press Q to dash", Enum.KeyCode.Q, function()
 end)
 
 
-Tab1Section:NewButton("ANTI AFK", "prevents afk", function()
+Tab1Section:NewButton("Anti AFK", "prevents afk", function()
 
 wait(0.5)local ba=Instance.new("ScreenGui")
 local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
