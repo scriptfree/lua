@@ -1,3 +1,8 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "HEY!";
+                Text = "You are protected. Provided by xubs script!";
+                Duration = 1.5;})
+
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
@@ -40,12 +45,12 @@ local function checkPlayers()
     end
 end
 
--- Continuously check for specific users in the game
+
 RunService.Heartbeat:Connect(function()
     checkPlayers()
 end)
 
--- Also check for specific users when a new player joins
+
 Players.PlayerAdded:Connect(function(player)
     if isSpecificUser(player.UserId) then
         LocalPlayer:Kick("A snitch or a mod has just joined your game. Saved by x_ubs")
