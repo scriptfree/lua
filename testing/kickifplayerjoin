@@ -19,6 +19,7 @@ local specificUserIds = {
     271115183, --bradreslam
     134447802, --ItsJustNicole00
     18403619, --Encrxpted_xCatter
+    6183442758 --NIGGER
 }
 
 local function isSpecificUser(userId)
