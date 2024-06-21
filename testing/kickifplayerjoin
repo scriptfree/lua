@@ -1,0 +1,52 @@
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+
+--SNITCHES AND MODERATORS \/ (THE OPPS)
+
+local specificUserIds = {
+    40842434, --Beac_n
+    699265483, --FracturedStudio
+    13540173, --FracturedSkies
+    185298371, --BXPY6504
+    1758830686, --Darkashh7
+    261682011, --IARKAI
+    207254569, --RelaxedRob
+    330236581, --WoahItsReaper
+    1697749342, --CrazyLKikoofcs
+    1162560272, --KaneJaneO_o
+    1540580366, --alibroola1111
+    271115183, --bradreslam
+    134447802, --ItsJustNicole00
+    18403619, --Encrxpted_xCatter
+}
+
+local function isSpecificUser(userId)
+    for _, id in ipairs(specificUserIds) do
+        if userId == id then
+            return true
+        end
+    end
+    return false
+end
+
+local function checkPlayers()
+    for _, player in pairs(Players:GetPlayers()) do
+        if isSpecificUser(player.UserId) then
+            LocalPlayer:Kick("A snitch or a mod had joined your game. Saved by x_ubs")
+            break
+        end
+    end
+end
+
+-- Continuously check for specific users in the game
+RunService.Heartbeat:Connect(function()
+    checkPlayers()
+end)
+
+-- Also check for specific users when a new player joins
+Players.PlayerAdded:Connect(function(player)
+    if isSpecificUser(player.UserId) then
+        LocalPlayer:Kick("A snitch or a mod has just joined your game. Saved by x_ubs")
+    end
+end)
