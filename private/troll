@@ -1,6 +1,6 @@
 --Zombie Rush
 
-
+local spinspeed = 1000
 
 --Dash Config
 
@@ -76,13 +76,20 @@ Tab1Section:NewTextBox("Jump Power", "Default is 50", function(jp)
         game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = jp
 end)
 
+Tab1Section:NewTextBox("Hipheight Changer", "Changes your player hipheight", function(hh)
+
+game.Players.maztz.Character.Humanoid.HipHeight = hh
+
+end)
+
 Tab1Section:NewTextBox("Gravity", "Default is 196.2", function(g)
 
 game.workspace.Gravity = g
 end)
 
-Tab1Section:NewSlider("Spin power", "spin", 100, 0, function(sp)
-    power = sp
+Tab1Section:NewButton("Start spinning", "spins your character and can fling people", function()
+
+power = spinspeed
  
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
@@ -99,10 +106,11 @@ bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 end)
 
 
+
 Tab1Section:NewTextBox("Spin Power", "Default is 0", function(s)
 
 
-power = s
+power = spinspeed
  
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
