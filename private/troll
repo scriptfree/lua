@@ -1,0 +1,167 @@
+--Zombie Rush
+
+
+
+--Dash Config
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local userInputService = game:GetService("UserInputService")
+local cooldown = 0
+local canDash = true
+
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "HEY!";
+                Text = "NIGGERS";
+                Duration = 1.5;})
+
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("troll gui", "DarkTheme") 
+
+
+local Tab1 = Window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Configs")
+
+
+
+-- DASH
+
+local function dash()
+    if canDash then
+        canDash = false
+
+        -- Apply a forward force to the player's character
+        local dashDirection = humanoidRootPart.CFrame.lookVector * 150 -- Adjust the multiplier to set dash distance
+        humanoidRootPart.Velocity = dashDirection
+
+        -- Print for debug purposes
+        print("Dashing forward!")
+
+        -- Wait for the cooldown duration
+        wait(cooldown)
+
+        -- Reset dash ability
+        canDash = true
+
+        -- Print for debug purposes
+        print("Dash is ready again!")
+    end
+end
+
+--dash
+player.CharacterAdded:Connect(function(char)
+    character = char
+    humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+end)
+
+
+
+
+Tab1Section:NewTextBox("Go to player", "Put in full username with punctuation", function(pl)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[pl].Character.HumanoidRootPart.CFrame
+
+end)
+
+Tab1Section:NewTextBox("Walk Speed", "Default is 16", function(ws)
+
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
+end)
+
+Tab1Section:NewTextBox("Jump Power", "Default is 50", function(jp)
+
+        game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = jp
+end)
+
+Tab1Section:NewTextBox("Gravity", "Default is 196.2", function(g)
+
+game.workspace.Gravity = g
+end)
+
+Tab1Section:NewTextBox("Spin Power", "Default is 0", function(s)
+
+
+power = s
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+end)
+
+
+
+Tab1Section:NewLabel("Stuff")
+
+Tab1Section:NewKeybind("Spam Dash", "Press Q to dash", Enum.KeyCode.Q, function()
+    dash()
+end)
+
+Tab1Section:NewButton("Anti AFK", "prevents afk", function()
+
+wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,304,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,304,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,304,0,21)_b.Font=Enum.Font.Arial;_b.Text="Made by Warn"
+_b.TextColor3=Color3.new(1,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377379,0)
+ab.Size=UDim2.new(0,304,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Started"
+ab.TextColor3=Color3.new(1,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="You went idle."wait(2)ab.Text="Re-Enabled"end)
+
+end)
+
+
+Tab1Section:NewButton("Force Reset", "Resets your character", function()
+
+local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Humanoid") then
+        player.Character.Humanoid.Health = 0
+    end
+
+end)
+
+Tab1Section:NewButton("Rejoin", "Rejoins the game", function()
+
+    local TeleportService = game:GetService("TeleportService")
+    local Players = game:GetService("Players")
+    local LocalPlayer = Players.LocalPlayer
+
+    local Rejoin = coroutine.create(function()
+        local Success, ErrorMessage = pcall(function()
+            TeleportService:Teleport(game.PlaceId, LocalPlayer)
+        end)
+
+        if ErrorMessage and not Success then
+            warn(ErrorMessage)
+        end
+    end)
+
+    coroutine.resume(Rejoin)
+
+end)
+
+
+
+ 
