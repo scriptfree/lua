@@ -141,6 +141,9 @@ Tab1Section:NewKeybind("Dash", "Press Q to dash", Enum.KeyCode.Q, function()
     dash()
 end)
 
+Tab1Section:NewButton("Anti ban", "prevents afk", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptfree/lua/main/testing/kickifplayerjoin"))()
+end)
 
 Tab1Section:NewButton("Anti AFK", "prevents afk", function()
 
