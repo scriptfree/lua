@@ -38,7 +38,7 @@ end
 local function checkPlayers()
     for _, player in pairs(Players:GetPlayers()) do
         if isSpecificUser(player.UserId) then
-            LocalPlayer:Kick("A snitch or a mod had joined your game. Saved by x_ubs")
+            LocalPlayer:Kick("A snitch or a mod had joined your game.")
             break
         end
     end
@@ -52,6 +52,6 @@ end)
 
 Players.PlayerAdded:Connect(function(player)
     if isSpecificUser(player.UserId) then
-        LocalPlayer:Kick("A snitch or a mod has just joined your game. Saved by x_ubs")
+        LocalPlayer:Kick("A snitch or a mod has just joined your game.")
     end
 end)
