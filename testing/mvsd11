@@ -18,7 +18,7 @@ local Tab1Section = Tab1:NewSection("the stuff")
 Tab1Section:NewButton("KILL ALL", "Win!", function()
 
 equipgun()
-task.wait(0.7)
+task.wait(0.1)
 killall()
 
 end)
