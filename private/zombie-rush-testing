@@ -3,6 +3,7 @@
 
 
 
+
 game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "Loaded!";
                 Text = "Provided by xubs script! ";
@@ -20,6 +21,7 @@ local Tab1Section = Tab1:NewSection("All Scripts")
 
 
 
+
 Tab1Section:NewTextBox("Walk Speed", "Default is 16", function(ws)
 
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
@@ -29,6 +31,7 @@ Tab1Section:NewTextBox("Jump Power", "Default is 50", function(jp)
 
         game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = jp
 end)
+
 
 Tab1Section:NewToggle("Autobring all", nil, function(State)
 cool = State
@@ -79,10 +82,6 @@ Tab1Section:NewButton("Go to lobby", "Tps you to the lobby for safe autofarming"
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(228.31576538085938, 16.68985939025879, 548.6548461914062)
 
 end)
-
-
-
-
 
 
 
