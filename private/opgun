@@ -1,0 +1,101 @@
+--Zombie Rush Testing
+
+
+
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Loaded!";
+                Text = "nigigeigiierigierg";
+                Duration = 1.5;})
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("Zombie Rushmore", "DarkTheme") 
+
+
+local Tab1 = Window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("All Scripts")
+
+local player = game.Players.LocalPlayer
+
+local firstRun = true
+
+local opGun = false
+
+
+function opWeapon(tool)
+	if isGun(tool) then
+		local con = tool.Configuration
+		if con.Range.Value ~= 9999 then
+			con.Range.Value = 9999
+			con.FullAuto.Value = true
+			con.Spread.Value = 0
+			-- con.Burst.Value = 2
+			con.Firerate.Value = 75
+			con.Damage.Value = 99999
+			tool.GunController.Disabled = true
+			tool.GunController.Disabled = false
+		end
+
+	end
+end
+
+-- Checks if tool is gun
+function isGun(tool)
+	local returnValue = false
+	if tool then
+		if tool.ClassName == "Tool" and tool:FindFirstChild("Configuration") and tool:FindFirstChild("GunController") then
+			returnValue = true
+		end
+	end
+	return returnValue
+end
+
+
+
+	while true do
+		if opGun then
+			local tool = player.Character:FindFirstChildWhichIsA("Tool")
+			if tool then
+				if isGun(tool) then
+					-- print('modifying tool')
+					opWeapon(tool)
+				end
+			end
+		end
+
+		end
+		
+		wait()
+	end
+
+Tab1Section:NewToggle("OP GUN", nil, function(bool)
+
+shared.toggle = bool
+	opGun = bool
+	--local tool = player.Character:FindFirstChildWhichIsA("Tool")
+	--if tool then
+	--	opWeapon(tool)
+	--end
+	--[[
+    while bool do
+		local tool = player.Character:FindFirstChildWhichIsA("Tool")
+		if tool then
+			opWeapon(tool)
+		end
+		wait(1)
+	end
+	--]]
+
+	
+
+end)
+
+firstRun = false
+spawn(mainLoop)
+
+
+
+
+
+
+
