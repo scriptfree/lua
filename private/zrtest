@@ -54,7 +54,7 @@ function opWeapon(tool)
 			con.FullAuto.Value = true
 			con.Spread.Value = 0
 			-- con.Burst.Value = 2
-			con.Firerate.Value = 75
+			con.Firerate.Value = 100
 			con.Damage.Value = 99999
 			tool.GunController.Disabled = true
 			tool.GunController.Disabled = false
